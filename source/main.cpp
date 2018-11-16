@@ -7,14 +7,20 @@ using namespace std;
 
 
 int main() {
-	Deque<int> a;
+
+	Deque<int>b;
+	Deque<int>a;
+	b.addFront(0);
 	for (int i = 0; i < 20; i++) {
-		a.addTail(i);
+		a.addFront(i);
 	}
-	fun(a, 19);
 	for (int i = 0; i < 20; i++) {
-		cout << a.removeFront() << endl;
+		b.addFront(b.removeFront() + a.removeFront());
 	}
+	char a1[] ="abfdd\ffba";
+
+	cout << polindrom(a1);
+
 
 
 	return 0;

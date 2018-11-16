@@ -48,7 +48,24 @@ void fun(Deque<T> &a, int n) {
 
 
 
+bool polindrom(char *str) {
+	Deque<char> a;
+	while (*str!='\0') {
 
+		a.addFront(*str);
+		str++;
+	};
+	
+
+	while (a.size()>1) {
+		
+		if (a.removeFront() != a.removeTail()) {
+			return false;
+		}
+		
+	};
+		return true;
+}
 
 
 
